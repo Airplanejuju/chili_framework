@@ -40,6 +40,42 @@ void Game::UpdateModel()
 {
 }
 
+
 void Game::ComposeFrame()
-{
+{	
+	/*int x = 0;
+	int y = 0;
+	for (x = 0; x > 800; x++)
+	{
+		x++;
+		for (y = 0; y > 600; y++)
+		{
+			y++;
+		}
+	} //I'm stupid
+	*/ 
+	const static int dx = 300;
+	const static int dy = 194;
+
+	const static int x = 100;
+	const static int y = 106;
+	
+	bool cond = wnd.kbd.KeyIsPressed(VK_DOWN);
+	
+
+	if (cond)
+	{
+		gfx.PutPixel(x + dx, (y - 6) + dy, 255, 0, 0);
+		gfx.PutPixel(x + dx, (y - 5) + dy, 255, 0, 0);
+		gfx.PutPixel(x + dx, (y - 4) + dy, 255, 0, 0);
+		gfx.PutPixel(x + dx, (y + 4) + dy, 255, 0, 0);
+		gfx.PutPixel(x + dx, (y + 5) + dy, 255, 0, 0);
+		gfx.PutPixel(x + dx, (y + 6) + dy, 255, 0, 0);
+		gfx.PutPixel((x + 5) + dx, y + dy, 255, 0, 0);
+		gfx.PutPixel((x + 6) + dx, y + dy, 255, 0, 0);
+		gfx.PutPixel((x + 7) + dx, y + dy, 255, 0, 0);
+		gfx.PutPixel((x - 5) + dx, y + dy, 255, 0, 0);
+		gfx.PutPixel((x - 6) + dx, y + dy, 255, 0, 0);
+		gfx.PutPixel((x - 7) + dx, y + dy, 255, 0, 0);
+	}
 }
