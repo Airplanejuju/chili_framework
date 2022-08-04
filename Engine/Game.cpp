@@ -92,18 +92,18 @@ void Game::ComposeFrame()
 
 	if (cond1)
 	{
-		gfx.PutPixel(x + dx, (y - 6) + dy, 255, gb, gb);
-		gfx.PutPixel(x + dx, (y - 5) + dy, 255, gb, gb);
 		gfx.PutPixel(x + dx, (y - 4) + dy, 255, gb, gb);
+		gfx.PutPixel(x + dx, (y - 3) + dy, 255, gb, gb);
+		gfx.PutPixel(x + dx, (y - 2) + dy, 255, gb, gb);
+		gfx.PutPixel(x + dx, (y + 2) + dy, 255, gb, gb);
+		gfx.PutPixel(x + dx, (y + 3) + dy, 255, gb, gb);
 		gfx.PutPixel(x + dx, (y + 4) + dy, 255, gb, gb);
-		gfx.PutPixel(x + dx, (y + 5) + dy, 255, gb, gb);
-		gfx.PutPixel(x + dx, (y + 6) + dy, 255, gb, gb);
+		gfx.PutPixel((x + 3) + dx, y + dy, 255, gb, gb);
+		gfx.PutPixel((x + 4) + dx, y + dy, 255, gb, gb);
 		gfx.PutPixel((x + 5) + dx, y + dy, 255, gb, gb);
-		gfx.PutPixel((x + 6) + dx, y + dy, 255, gb, gb);
-		gfx.PutPixel((x + 7) + dx, y + dy, 255, gb, gb);
+		gfx.PutPixel((x - 3) + dx, y + dy, 255, gb, gb);
+		gfx.PutPixel((x - 4) + dx, y + dy, 255, gb, gb);
 		gfx.PutPixel((x - 5) + dx, y + dy, 255, gb, gb);
-		gfx.PutPixel((x - 6) + dx, y + dy, 255, gb, gb);
-		gfx.PutPixel((x - 7) + dx, y + dy, 255, gb, gb);
 	}
 
 	else
