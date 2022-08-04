@@ -69,12 +69,12 @@ void Game::ComposeFrame()
 
 	if (wnd.kbd.KeyIsPressed(VK_RIGHT))
 	{
-		dx-=100;
+		dx+=100;
 	}
 
 	if (wnd.kbd.KeyIsPressed(VK_LEFT))
 	{
-		dx+=100;
+		dx-=100;
 	}
 
 	if (wnd.kbd.KeyIsPressed(VK_DOWN))
