@@ -84,7 +84,7 @@ void Game::ComposeFrame()
 
 	if (wnd.kbd.KeyIsPressed(VK_UP))
 	{
-		dy+=100;
+		dy-=100;
 	}
 
 	
