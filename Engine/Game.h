@@ -52,5 +52,11 @@ private:
 
 	bool cond1 = wnd.kbd.KeyIsPressed(VK_SPACE);
 	//bool cond2 = wnd.kbd.KeyIsPressed(VK_CONTROL);
+
+	bool inhibitUp = false;
+	bool inhibitDown = false;
+	bool inhibitLeft = false;
+	bool inhibitRight = false;
+	
 	/********************************/
 };
