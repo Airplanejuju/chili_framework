@@ -38,24 +38,6 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
-}
-
-
-void Game::ComposeFrame()
-{	
-
-	const static int x = 400;
-	const static int y = 300;
-	
-	int dx = 0;
-	int dy = 0;
-
-	int gb = 255;
-
-	bool cond1 = wnd.kbd.KeyIsPressed(VK_SPACE);
-	//bool cond2 = wnd.kbd.KeyIsPressed(VK_CONTROL);
-
-	
 	// 255, 0 , 0 - red // 0, 255, 0 - green // 0, 0, 255 - blue      //RGB
 	//color
 
@@ -64,30 +46,34 @@ void Game::ComposeFrame()
 		gb = 0;
 	}
 
-	
+
 	//movement
 
 	if (wnd.kbd.KeyIsPressed(VK_RIGHT))
 	{
-		dx+=100;
+		dx += 2;
 	}
 
 	if (wnd.kbd.KeyIsPressed(VK_LEFT))
 	{
-		dx-=100;
+		dx -= 2;
 	}
 
 	if (wnd.kbd.KeyIsPressed(VK_DOWN))
 	{
-		dy+=100;
+		dy += 2;
 	}
 
 	if (wnd.kbd.KeyIsPressed(VK_UP))
 	{
-		dy-=100;
+		dy -= 2;
 	}
 
-	
+}
+
+
+void Game::ComposeFrame()
+{	
 	//shape
 
 	if (cond1)

@@ -42,5 +42,15 @@ private:
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
+	const static int x = 400;
+	const static int y = 300;
+
+	int dx = 0;
+	int dy = 0;
+
+	int gb = 255;
+
+	bool cond1 = wnd.kbd.KeyIsPressed(VK_SPACE);
+	//bool cond2 = wnd.kbd.KeyIsPressed(VK_CONTROL);
 	/********************************/
 };
