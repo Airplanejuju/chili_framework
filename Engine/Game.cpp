@@ -51,23 +51,26 @@ void Game::UpdateModel()
 
 	if (wnd.kbd.KeyIsPressed(VK_RIGHT))
 	{
-		dx += 2;
+		vx += 1;
 	}
 
 	if (wnd.kbd.KeyIsPressed(VK_LEFT))
 	{
-		dx -= 2;
+		vx -= 1;
 	}
 
 	if (wnd.kbd.KeyIsPressed(VK_DOWN))
 	{
-		dy += 2;
+		vy += 1;
 	}
 
 	if (wnd.kbd.KeyIsPressed(VK_UP))
 	{
-		dy -= 2;
+		vy -= 1;
 	}
+
+	x += vx;
+	y += vy;
 
 }
 
@@ -78,33 +81,34 @@ void Game::ComposeFrame()
 
 	if (cond1)
 	{
-		gfx.PutPixel(x + dx, (y - 4) + dy, 255, gb, gb);
-		gfx.PutPixel(x + dx, (y - 3) + dy, 255, gb, gb);
-		gfx.PutPixel(x + dx, (y - 2) + dy, 255, gb, gb);
-		gfx.PutPixel(x + dx, (y + 2) + dy, 255, gb, gb);
-		gfx.PutPixel(x + dx, (y + 3) + dy, 255, gb, gb);
-		gfx.PutPixel(x + dx, (y + 4) + dy, 255, gb, gb);
-		gfx.PutPixel((x + 3) + dx, y + dy, 255, gb, gb);
-		gfx.PutPixel((x + 4) + dx, y + dy, 255, gb, gb);
-		gfx.PutPixel((x + 5) + dx, y + dy, 255, gb, gb);
-		gfx.PutPixel((x - 3) + dx, y + dy, 255, gb, gb);
-		gfx.PutPixel((x - 4) + dx, y + dy, 255, gb, gb);
-		gfx.PutPixel((x - 5) + dx, y + dy, 255, gb, gb);
+
+		gfx.PutPixel(x, (y - 4), 255, gb, gb);
+		gfx.PutPixel(x, (y - 3), 255, gb, gb);
+		gfx.PutPixel(x, (y - 2), 255, gb, gb);
+		gfx.PutPixel(x, (y + 2), 255, gb, gb);
+		gfx.PutPixel(x, (y + 3), 255, gb, gb);
+		gfx.PutPixel(x, (y + 4), 255, gb, gb);
+		gfx.PutPixel((x + 3), y, 255, gb, gb);
+		gfx.PutPixel((x + 4), y, 255, gb, gb);
+		gfx.PutPixel((x + 5), y, 255, gb, gb);
+		gfx.PutPixel((x - 3), y, 255, gb, gb);
+		gfx.PutPixel((x - 4), y, 255, gb, gb);
+		gfx.PutPixel((x - 5), y, 255, gb, gb);
 	}
 
 	else
 	{
-		gfx.PutPixel((x + dx) + 1, (y + dy) - 2, 255, gb, gb);
-		gfx.PutPixel((x + dx), (y + dy) - 2,     255, gb, gb);
-		gfx.PutPixel((x + dx), (y + dy) - 1,     255, gb, gb);
-		gfx.PutPixel((x + dx), (y + dy) + 2,     255, gb, gb);
-		gfx.PutPixel((x + dx), (y + dy) + 3,     255, gb, gb);
-		gfx.PutPixel((x + dx) + 1, (y + dy) + 3, 255, gb, gb);
-		gfx.PutPixel((x + dx) + 4, (y + dy) - 2, 255, gb, gb);
-		gfx.PutPixel((x + dx) + 5, (y + dy) - 2, 255, gb, gb);
-		gfx.PutPixel((x + dx) + 5, (y + dy) - 1, 255, gb, gb);
-		gfx.PutPixel((x + dx) + 5, (y + dy) + 2, 255, gb, gb);
-		gfx.PutPixel((x + dx) + 5, (y + dy) + 3, 255, gb, gb);
-		gfx.PutPixel((x + dx) + 4, (y + dy) + 3, 255, gb, gb);
+		gfx.PutPixel(x + 1, y - 2, 255, gb, gb);
+		gfx.PutPixel(x, y - 2, 255, gb, gb);
+		gfx.PutPixel(x, y - 1, 255, gb, gb);
+		gfx.PutPixel(x, y + 2, 255, gb, gb);
+		gfx.PutPixel(x, y + 3, 255, gb, gb);
+		gfx.PutPixel(x + 1, y + 3, 255, gb, gb);
+		gfx.PutPixel(x + 4, y - 2, 255, gb, gb);
+		gfx.PutPixel(x + 5, y - 2, 255, gb, gb);
+		gfx.PutPixel(x + 5, y - 1, 255, gb, gb);
+		gfx.PutPixel(x + 5, y + 2, 255, gb, gb);
+		gfx.PutPixel(x + 5, y + 3, 255, gb, gb);
+		gfx.PutPixel(x + 4, y + 3, 255, gb, gb);
 	}
 }

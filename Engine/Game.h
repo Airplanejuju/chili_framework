@@ -42,11 +42,11 @@ private:
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
-	const static int x = 400;
-	const static int y = 300;
+	int x = 400;
+	int y = 300;
 
-	int dx = 0;
-	int dy = 0;
+	int vx = 0;
+	int vy = 0;
 
 	int gb = 255;
 
