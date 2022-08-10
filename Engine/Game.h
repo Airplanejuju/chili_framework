@@ -52,7 +52,7 @@ private:
 	int g = 255;
 	int b = 255;
 
-	bool cond1 = wnd.kbd.KeyIsPressed(VK_SPACE);
+	//bool cond1 = wnd.kbd.KeyIsPressed(VK_SPACE);
 	//bool cond2 = wnd.kbd.KeyIsPressed(VK_CONTROL);
 
 	bool inhibitUp = false;

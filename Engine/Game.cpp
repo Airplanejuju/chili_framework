@@ -195,7 +195,7 @@ void Game::ComposeFrame()
 {	
 	//shape
 
-	if (cond1)
+	if (wnd.kbd.KeyIsPressed((VK_SPACE)))
 	{
 
 		gfx.PutPixel(x, (y - 4), r, g, b);
