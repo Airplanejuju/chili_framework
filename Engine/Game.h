@@ -48,7 +48,9 @@ private:
 	int vx = 0;
 	int vy = 0;
 
-	int gb = 255;
+	int r = 255;
+	int g = 255;
+	int b = 255;
 
 	bool cond1 = wnd.kbd.KeyIsPressed(VK_SPACE);
 	//bool cond2 = wnd.kbd.KeyIsPressed(VK_CONTROL);
